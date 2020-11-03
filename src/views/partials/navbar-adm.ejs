@@ -1,63 +1,81 @@
 <nav class="navbar navbar-expand-lg navbar-dark unique-color py-4 fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="/">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto text-uppercase">
-          <li class="nav-item active">
-            <a class="nav-link waves-effect waves-light" href="/"
-              >Dashboard <span class="sr-only">(current)</span></a
+  <div class="container">
+    <a class="navbar-brand" href="/adm">ADM</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto text-uppercase">
+        <li class="nav-item active">
+          <a class="nav-link waves-effect waves-light" href="/adm"
+            >Dashboard <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" href="/posts/list-posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" href="#">Categorias</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle waves-effect waves-light"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Gerenciar</a
+          >
+          <div
+            class="dropdown-menu dropdown-info"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <a
+              class="dropdown-item waves-effect waves-light"
+              href="/adm/list-users"
+              >Usuários</a
             >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect waves-light" href="#">Publicações</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect waves-light" href="#">Categorias</a>
-          </li>
-          
-        </ul>
-  
-        <div class="md-form my-0">
-          <ul class="navbar-nav mr-auto text-uppercase">
-            <li class="nav-item dropdown">
+          </div>
+        </li>
+      </ul>
+
+      <div class="md-form my-0">
+        <ul class="navbar-nav mr-auto text-uppercase">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle waves-effect waves-light"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Opções</a
+            >
+            <div
+              class="dropdown-menu dropdown-info"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
               <a
-                class="nav-link dropdown-toggle waves-effect waves-light"
-                id="navbarDropdownMenuLink"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Opções</a
+                class="dropdown-item waves-effect waves-light"
+                href="/users/logout"
+                >Logout</a
               >
-              <div
-                class="dropdown-menu dropdown-info"
-                aria-labelledby="navbarDropdownMenuLink"
+              <a
+                class="dropdown-item waves-effect waves-light"
+                href="/users/register"
+                >Register</a
               >
-                <a
-                  class="dropdown-item waves-effect waves-light"
-                  href="/users/logout"
-                  >Logout</a
-                >
-                <a
-                  class="dropdown-item waves-effect waves-light"
-                  href="/users/register"
-                  >Register</a
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-  </nav>
-  
+  </div>
+</nav>

@@ -1,0 +1,68 @@
+<% layout ('layouts/adm')-%>
+
+<div class="container py-5">
+  <div class="card">
+    <div class="card-header text-white elegant-color text-center">
+      <h2>Criar novo post</h2>
+    </div>
+    <div class="card-body">
+      <form
+        action="/blog/create-post"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Título</label>
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Título da publicação"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Descrição</label>
+          <textarea
+            name="description"
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="O conteúdo da descrição ficará visível na visualização do post"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Conteúdo</label>
+          <textarea
+            name="content"
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="conteúdo da publicação"
+          ></textarea>
+        </div>
+        <label>Imagem destacada</label>
+        <div class="custom-file mb-3">
+          <input
+            type="file"
+            name="images"
+            accept="images/*"
+            class="custom-file-input"
+            id="customFile"
+            multiple
+          />
+          <label class="custom-file-label" for="customFile"
+            >Procurar arquivos</label
+          >
+        </div>
+
+        <label><span class="text-danger">*</span> Categoria </label>
+
+       
+        </div> -->
+
+        <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+      </form>
+    </div>
+  </div>
+</div>

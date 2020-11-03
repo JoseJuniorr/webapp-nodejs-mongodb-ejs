@@ -1,0 +1,92 @@
+<% layout ('layouts/adm')-%>
+<div class="container py-4">
+  <h1>Lista de Posts</h1>
+  <hr />
+  <a href="/posts/new"
+    ><button class="btn btn-primary mb-4">Cadastrar posts</button></a
+  >
+  <hr />
+  <% include ../partials/flash-messages %>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Título</th>
+
+        <th scope="col">Data de cadastro</th>
+
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% posts.forEach(function(posts) { %>
+      <tr>
+        <th scope="row"><%= posts.id %></th>
+        <td><%= posts.title %></td>
+        <td><%= moment( posts.createdAt).format('LLL') %></td>
+        <td>
+          <a href="/blog/edit-posts/<%= posts.id%>"
+            ><button class="btn btn-outline-primary">Editar</button></a
+          >
+        </td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-outline-danger"
+            data-toggle="modal"
+            data-target="#delete-posts"
+          >
+            Excluir
+          </button>
+        </td>
+      </tr>
+      <div
+        class="modal fade"
+        id="delete-posts"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Excluir posts</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Tem certeza que deseja excluir essa publicação?
+            </div>
+            <div class="modal-footer">
+              <form
+                action="#"
+                method="POST"
+              >
+                <input type="hidden" name="_method" value="DELETE" />
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button type="submit" class="btn btn-outline-danger">
+                  Excluir
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </tbody>
+  </table>
+</div>

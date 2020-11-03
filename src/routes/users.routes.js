@@ -6,7 +6,10 @@ const {
   login,
   logout,
   renderFormRegister,
+  register,
 } = require("../controllers/UserController");
+
+const { isAuthenticated } = require("../helpers/isAuthenticated");
 
 //formulário de login
 router.get("/login", renderFormLogin);
@@ -16,6 +19,8 @@ router.post("/login", login);
 router.get("/logout", logout);
 
 //register
-router.get("/register", renderFormRegister);
+router.get("/register", isAuthenticated, renderFormRegister);
+
+router.post("/register", isAuthenticated, register);
 
 module.exports = router;
