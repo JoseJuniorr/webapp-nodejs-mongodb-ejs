@@ -1,5 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 body {
-  padding-top: 7rem;
+ background-color: #faf9f9; 
+}
+ul,
+ol,
+li {
+  list-style: none;
 }
 
 a {
